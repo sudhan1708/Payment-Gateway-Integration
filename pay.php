@@ -1,12 +1,12 @@
 <?php
 require('./instamojo.php');
-const API_KEY ="test_1e94b7b8c59575f5c789a0bd02c";
-const AUTH_TOKEN="test_d6baaab2b822887eec78e4eae15";
+const API_KEY ="<<<<YOUR API  KEY>>>>";
+const AUTH_TOKEN="<<<<YOUR TOKEN KEY>>>>>>>>";
 
 
 if(isset($_POST['purpose']) && isset($_POST['name']) && isset($_POST['email']) && isset($_POST['amount']))
 {
-    $api = new Instamojo\Instamojo(API_KEY, AUTH_TOKEN,'https://test.instamojo.com/api/1.1/');
+    $api = new Instamojo\Instamojo(API_KEY, AUTH_TOKEN,'https://test.instamojo.com/api/1.1/'); //for test credentials use this link and for live credentials change it to www
     
     try {
         $response = $api->paymentRequestCreate(array(
